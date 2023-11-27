@@ -317,3 +317,24 @@ const range = XLSX.utils.decode_range(worksheet["!ref"]);
 //   // Save the modified workbook to file
   XLSX.writeFile(workbook, "data.xlsx");
 }
+
+
+
+
+           //Mobile only
+         window.onload = function () { 
+            setTimeout(function () { 
+               const body = document.getElementsByTagName('body')[0];
+                body.querySelector("#billType").innerHTML = "Consignee copy";
+                const copy1 = body.cloneNode(true);
+                copy1.querySelector("#billType").innerHTML = "Consignor copy";
+                const copy2 = body.cloneNode(true);
+                copy2.querySelector("#billType").innerHTML = "Driver copy";
+                document.body.appendChild(copy1);
+                document.body.appendChild(copy2);
+            }, 3000); // Delay of 5 seconds 
+        }; 
+
+         setTimeout(function () { 
+             window.print();
+              }, 9000);
