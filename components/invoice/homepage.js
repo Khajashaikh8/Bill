@@ -2,7 +2,7 @@
 var currentUser = localStorage.getItem("currentUser");
 
 if (!currentUser) {
-  location.href = "../../login.html";
+  location.href = "../../index.html";
 }
 
 //----------------------------------------
