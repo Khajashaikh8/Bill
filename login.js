@@ -18,7 +18,7 @@ function loginUser() {
 
   if (flag) {
     localStorage.setItem("currentUser", username.value);
-    location.href = "../invoice/homepage.html";
+    location.href = "./components/invoice/homepage.html";
   } else {
     alert("User does not exist, Incorrect Username and Password!");
     username.value = "";
