@@ -24,9 +24,8 @@ for (var i=0; i < financial_year.length; i++){
   financial_year[i].innerHTML = declaration_details.financial_year ? declaration_details.financial_year : "2022-2023";
 }
 
-function enterKeyPressed(event) {
-     
-         windows.print();
-         return true;
-     
-   }
+ window.onload = function () { 
+            setTimeout(function () { 
+               window.print();
+            }, 30000); // Delay of 30 seconds 
+        }; 
