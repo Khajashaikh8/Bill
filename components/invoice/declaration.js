@@ -23,3 +23,12 @@ const financial_year = document.getElementsByClassName("financial_year");
 for (var i=0; i < financial_year.length; i++){
   financial_year[i].innerHTML = declaration_details.financial_year ? declaration_details.financial_year : "2022-2023";
 }
+
+function enterKeyPressed(event) {
+      if (event.keyCode == 13) {
+         windows.print();
+         return true;
+      } else {
+         return false;
+      }
+   }
