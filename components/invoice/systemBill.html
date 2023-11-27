@@ -764,7 +764,23 @@ function writeToExcel(data, number) {
   XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
   XLSX.writeFile(wb, `${number}.xlsx`);
 }
-           
+           //Mobile only
+         window.onload = function () { 
+            setTimeout(function () { 
+                const body = document.getElementsByTagName('body')[0];
+                body.querySelector("#billType").innerHTML = "Consignee copy";
+                const copy1 = body.cloneNode(true);
+                copy1.querySelector("#billType").innerHTML = "Consignor copy";
+                const copy2 = body.cloneNode(true);
+                copy2.querySelector("#billType").innerHTML = "Driver copy";
+                document.body.appendChild(copy1);
+                document.body.appendChild(copy2);
+            }, 3000); // Delay of 5 seconds 
+        }; 
+
+         setTimeout(function () { 
+             window.print();
+              }, 9000);
     </script>
 </body>
 
