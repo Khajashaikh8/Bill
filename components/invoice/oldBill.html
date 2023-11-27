@@ -1,0 +1,848 @@
+<html>
+
+<head>
+    
+    <title id="title"></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <style>
+        
+        .tableBank {
+            border: 1px black;
+            border-collapse: collapse;
+            font-size: smaller;
+            font-weight: bold;
+            
+        }
+        
+        .comname{
+
+            background-image: linear-gradient(to bottom,purple, purple,purple);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        }
+
+        label{
+
+            font-weight: bold;
+        }
+
+        
+        .marks{
+            font-size:small;
+        }
+        .transfer {
+            float: right;
+            
+
+        }
+
+        .mn {
+            width: 400px;
+        }
+
+
+        .table0,
+        .table1,
+        .table2,
+        .table3,
+        .table4 {
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: medium;
+           
+
+        }
+
+        .note1 {
+            width: 700px;
+            
+        }
+
+
+        
+
+        #mailid {
+            width: 250px;
+        }
+
+        #state {
+            width: 500px;
+        }
+
+        #address,
+        #mobile {
+            width: 1000px;
+        }
+
+        .line1 {
+            display: inline;
+            padding-left: 60px;
+        }
+
+        .table0 {
+            width: 27%;
+            height: 19.2%;
+        }
+
+        .table1 {
+            width: 12.5%;
+            height: 19.1%;
+        }
+
+        .table2 {
+            width: 12.5%;
+            height: 19.1%;
+        }
+
+        .table3 {
+            width: 20%;
+            height: 19.1%;
+
+        }
+
+        .table4 {
+            width: 28%;
+            height: 19.1%;
+        }
+
+
+        th,
+        td {
+            border: 2px solid black;
+        }
+
+        .almiddle {
+            padding-top: 36px;
+            padding-bottom: 36px;
+
+        }
+
+        .alAxact {
+            padding-top: 11px;
+            padding-bottom: 12px;
+        }
+
+        .alAxact1 {
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+
+        label {
+            text-align: left;
+            padding-right: 10px;
+        }
+
+        .inputt {
+            float: right;
+            inline-size: 3cm;
+        }
+
+        .sizy {
+            width: 180px;
+        }
+
+        .nonee {
+            float: none;
+            inline-size: 3cm;
+            block-size: 1.4cm;
+        }
+
+        .BillNo {
+            display: inline;
+            padding-left: 10px;
+            
+        }
+            #BillNo{
+                font-size: large;
+
+            }
+        .datein {
+            float: right;
+            padding-right: 20%;
+           
+        }
+        #datein{
+            font-size: large;
+        }
+ 
+        #lrno {
+            width: 300px;
+            font-size: large;
+        }
+
+        .lrno {
+            display: inline-flex;
+            padding-left: 10px;
+        }
+
+        .lrOName {
+            padding-left: 250px;
+            padding-top: 0.1rem;
+        }
+
+        #lrOName {
+            width: 350px;
+            font-size: large;
+        }
+
+        #dName {
+            width: 300px;
+            font-size: large;
+        }
+
+        .dName {
+            display: inline-flex;
+            padding-left: 10px;
+        }
+
+        .DlN {
+            padding-left: 312.5px;
+        }
+
+        #DlN {
+            width: 300px;
+            font-size: large;
+        }
+
+        #state0 {
+            width: 300px;
+            font-size: large;
+        }
+
+        .state0 {
+            display: inline-flex;
+            padding-left: 10px;
+        }
+
+        .state1 {
+            padding-left: 393.5px;
+        }
+
+        #state1 {
+            width: 300px;
+            font-size: large;
+        }
+
+        #consir {
+            width: 350px;
+            font-size: large;
+        }
+
+        .consir {
+            display: inline-flex;
+            padding-left: 10px;
+        }
+
+        .consie {
+            padding-left: 212px;
+        }
+
+        #consie {
+            width: 350px;
+            font-size: large;
+        }
+
+
+
+        .consiradd {
+            display: inline-flex;
+            padding-left: 100px;
+            width: auto;
+        }
+
+        #consiradd {
+            width: 400px;
+            font-size: large;
+        }
+
+        .consieadd {
+            padding-left: 180px;
+        }
+
+        #consieadd {
+            width: 400px;
+            font-size: large;
+        }
+
+        hr {
+            border: 1px solid black;
+        }
+
+        .bottom-container {
+            padding-bottom: 5px;
+        }
+
+        .top-one {
+            display: inline;
+            float: left;
+            padding-right: 55px;
+            
+
+        }
+           th,td{
+               border: 1px solid black;
+           }
+
+           input{
+               border: 1px solid lightgrey;
+           }
+
+           .line1{
+               padding-left: 5px;
+               font-size:x-small;
+           }
+       .bottomlast-container {
+           padding-top: 20px;
+        }
+
+        .mn{
+            width: 300px;
+            border: none;
+        }
+        
+        .tableBranch{
+            border-collapse: collapse;
+            font-weight: bold;
+           font-size: larger;
+          
+        }
+
+        input{
+            border:none;
+            font-weight: bold;
+        }
+
+        .signature{
+            
+            display: inline;
+        }
+        .mainN{
+            padding-left: 50%;
+            font-size: x-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+       
+
+    </style>
+</head>
+
+<body style="background-color: white;" >
+    <form>
+        <div class="top-container" style="margin-right: 3%;display: inline-flex;">
+            <div class="allIn">
+                <div class="top-one" style="margin-right: 40px;">
+                    <img src="../images/symbol.jpg" alt="logo" >
+<img src="../images/logo.png" alt="sharp-logo" >
+<p class="line1" style="font-size: medium;" id="subject">SUBJECT TO BIDAR JURISDICTION</p>
+                
+                    <h1 class="comname" id="companyName">SOUTH INDIA LORRY SUPPLIERS</h1>
+
+                    <h3 class="tagline" id="agentType" style="display: inline;">COMMISSION AGENT  </h3>
+
+                    <div style="display: inline;">
+                        <img style=" margin-right:1%; display:inline; margin-bottom: 0%; margin-top: 0%; padding-top: 0%; float:right; " src="../images/SharpQR.png" alt="QR Code">
+                    </div>
+                   
+                    <div>
+                        <input style=" width: 250px; float: left; font-family: 'Times New Roman', Times, serif; font-size:medium; font-weight: bolder; margin-left: 1%;margin-top: 5%; " value="GSTIN: 29BTOPS9421D1Z6">
+                        <h4 id="billType" style="color: red;  display: inline; "></h4>
+                    </div>
+                    
+                </div>
+                
+               
+
+                <div class="branch" >
+                    
+                    <table class="tableBranch"  >
+                        <tr>
+                            <th>BRANCH OFFICES</th>
+                        </tr>
+                        <tr>
+                            <td><input style="color: black; background-color: white;" type="text" value="SANGAREDDY (T.S.) : " disabled></td>
+                            <td><input style="color: black; background-color: white;" type="text" value="M. 9271714371, 9271775666, 9573389992" class="mn" disabled></td>
+                        </tr>
+                        <tr>
+                            <td><input style="color: black; background-color: white;"  type="text" value="UDGIR (M.H.) : " disabled></td>
+                            <td><input style="color: black; background-color: white;" type="text" value="M. 9075275444, 9075585444" class="mn" disabled></td>
+                        </tr>
+                        <tr>
+                            <td><input style="color: black; background-color: white;" type="text" value="SHAHPUR (K.A.) : " disabled></td>
+                            <td><input style="color: black; background-color: white;" type="text" value="M. 9686183777, 9742937777, 9901670333" class="mn" disabled></td>
+                        </tr>
+                    </table>
+                      
+                    
+
+                </div>
+                <div class="mainN">
+
+                    <input  type=" text" style="font-size: medium;color: black; background-color: white;" value="PAN No. BTOPS9421D" name="panNumber" id="pannu">
+                
+                    <input type="text" style="font-size: medium;color: black; background-color: white;" value="southindials999@gmail.com" name="email" id="mailid">
+                                                          
+                    <input type="text" style="font-size: medium;  width: 480px;color: black; background-color: white;" value="EXPRESS SERVICE TO : TAMILNADU" id="state">
+                               
+        <hr style="margin: 0; padding: 0;" />                  
+        
+                    <input style="width: 700px; margin-left: 2%;color: black; background-color: white; margin: 0;" type="text" value="H.O.Near Dastagir Masjid Shahpur Gate, Hyderabad Road, BIDAR - 585402(K.A.)" name="address" id="address">
+                    <input style="width: 700px; margin-left: 2%;color: black; background-color: white;" type="text" value="Mobile No. 9741754999, 9742362999, 9741753888, 9742938888, Off No. 9980741222" id="mobile" >     
+                            
+                </div> 	             
+        
+       </div>
+        
+
+        
+        </div>
+
+        
+
+        <hr style="margin: 0; padding: 0;" />
+
+    <div class="middle-container" style="font-size: larger; background-color: white;">
+
+            <div class="BillNo">
+                <label>No.</label>
+                <input style="background-color: white; color: black;" type="text" value="" id="BillNo" disabled>
+            </div>
+
+            <div class="datein">
+                <input style="background-color: white; color: black;" type="date" id="datein" >
+            </div>
+
+            <br>
+
+            <div class="lrNo">
+                <label>Lorry No.</label>
+                <input type="text" id="lrNo" disabled style="background-color: white; color: black;">
+                <div class="lrOName"><label>Lorry Owner Name: </label>
+                    <input style="background-color: white; color: black;" type="text" id="lrOName" disabled>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="dName">
+                <label>Driver Name: </label>
+                <input style="background-color: white; color: black;" type="text" id="dName" disabled>
+                <div class="DlN">
+                    <label>DL No.</label>
+                    <input style="background-color: white; color: black;" type="text" id="DlN" disabled>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="state0">
+                <label>From: </label>
+                <input style="background-color: white; color: black;" type="text" id="state0" disabled>
+
+                <div class="state1">
+                    <label>To: </label>
+                    <input style="background-color: white; color: black;" type="text" id="state1" disabled>
+
+                </div>
+            </div>
+
+            <br style="margin: 0; padding: 0;" />
+
+            <div class="consir" style="margin: 0; padding: 0;">
+                <label>Consignor: 
+                <input style="background-color: white; width: 380px; color: black;" type="text" id="consir" disabled>
+            </label>
+                <div class="consie">
+                    <label>Consignee: </label>
+                    <input style="background-color: white; width: 400px; color: black;" type="text" id="consie" disabled>
+                </div>
+            </div>
+
+            <div class="consiradd">
+
+                <p style="background-color: white; width: 500px; margin-top: 0; color: black;" id="consiradd" disabled></p>
+
+                <div class="consieadd">
+
+                    <p style="background-color: white; width: 500px; margin-top: 0; color: black;" id="consieadd"></p>
+                </div>
+            </div>
+
+            <br>
+
+            <hr style="margin: 0; padding: 0;" />
+
+        </div>
+  
+        <div class="bottom-container" style="font-weight:800 ;">
+            <table class="table0">
+                <tr>
+                    <th>Decription of Goods</th>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label>No.of Bales: </label>
+                        <input style="background-color: white; font-weight:800 ; color: black;" class="sizy" type="text" id="bales" class="inputt" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Quality: </label>
+                        <input style="background-color: white; font-weight:800 ; color: black;" class="sizy" type="text" id="QL" class="inputt" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>P.R No.</label>
+                        <input style="background-color: white; font-weight:800 ; color: black;" class="sizy" type="text" id="prno" class="inputt" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>P.Mark: </label>
+                        <input style="background-color: white; font-weight:800 ; color: black;" class="sizy" type="text" id="PM" class="inputt" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Lot No.</label>
+                        <input style="background-color: white; font-weight:800 ; color: black;" class="sizy" type="text" id="lNo" class="inputt" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Invo No.</label>
+                        <input style="background-color: white;  font-weight:800 ; color: black;" class="sizy" type="text" id="InNo" class="inputt" disabled>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table1">
+                <tr>
+                    <th>Weight</th>
+                </tr>
+                <tr>
+                    <td class="almiddle">
+                        <input style="background-color: white;  font-weight:700 ; font-size: large; color: black;" type="text" id="weights" class="nonee" class="inputt" disabled>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table2" style="padding-bottom: 50px;">
+                <tr>
+                    <th>Rate Per Bale</th>
+                </tr>
+                <tr style="padding-bottom: 100px;">
+                    <td class="almiddle">
+                        <input style="background-color: white;  font-weight:900 ; font-size: large; color: black;" type="text" id="rate" class="nonee" class="inputt" disabled>
+                    </td>
+
+                </tr>
+            </table>
+
+            <table class="table3"style="padding-right:0;" >
+                <tr>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td class="alAxact">
+                        <label>-----</label>
+                        <input style="background-color: white; color: black; " type="text" value="" id="iRs" class="inputt" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alAxact">
+                        <label>Advance</label>
+                        <input style="background-color: white; font-weight:900 ; font-size: large; color: black;" type="text" value="0.0" id="aRs" class="inputt" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="alAxact" style="padding-bottom: 9px;">
+                        <label style="font-size: large;">Total</label>
+                        <input style="background-color: white; font-weight:900 ; font-size: large; color: black;"  style="font-size: large;" type="text" value="0.0" id="tRs" class="inputt" disabled>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table4">
+                <tr>
+                    <th>Ramarks</th>
+                </tr>
+                <tr>
+                    <td class="alAxact1">
+                        <label>----</label>
+                        <input style="background-color: white;" type="text" name="" id="tbb" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="alAxact1">
+                        <label>----</label>
+                        <input style="background-color: white ;" type="text" name="" id="tp" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="alAxact1">
+                        <input  style="font-weight: 900; width: 150px; height: 20px; background-color: white; color: black;" type="text" name=""  id="remark" class="" value="Transport A/C only.">
+                        <img width="15px" height="15px" src="../images//tick.png" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <hr style="margin: 0; padding: 0;"/>
+
+
+        <div class="bottomlast-container" style="margin: 0; padding: 0;">
+            <div class="transfer">
+
+                <br>
+              
+                
+                <table class="tableBank" style="font-size: large;">
+                    <tr>
+                        <td>BANK NAME : <input style="font-size: large; color: black; background-color: white;" type="text" value="I.D.B.I" disabled></td>
+
+                    </tr>
+                    <tr>
+                        <td>BRANCH : <input style="font-size: large; color: black;background-color: white; " type="text" value="BIDAR (K.A.)" disabled></td>
+                    </tr>
+                    <tr>
+                        <td> A/C : <input style="font-size: large; color: black; background-color: white;" type="text" value="1081102000002288" disabled></td>
+                    </tr>
+                    <tr>
+                        <td> IFSC CODE : <input style="font-size: large; color: black; background-color: white;" type="text" value="IBKL0001081" disabled></td>
+
+                    </tr>
+                </table>
+                <h4 class="lineMain" style="display: inline-block;" >GST Payable by : Consignor/Consignee only</h4>
+            </div>
+           
+            <div>
+ <input style="color: black;" class="note1" type="text" value="NOTE : PAY AT TRANSPORT ACCOUNT ONLY." style="font-weight: bolder; margin-top: 1%;" disabled>
+                
+            </div>
+
+                
+               
+               
+ <div class="signature" style="margin: 0; padding: 0;">
+
+                 
+               
+                <img height="90px" width="20%" style=" display: inline-flex; margin-left: 41%; margin-top: 1%; background-color: white;" src="../images/sharp_sign_new.png" alt="DigitallySigned" border="0">
+                
+                <h5 class="sign1" style="display: inline-flex; margin-right: 30%; font-size: medium;" >Sig.Lorry Owner or Driver </h5>
+                <h5 class="sign2" style="display: inline-flex;font-size: medium;">Sig.South India Lorry Suppliers</h5>
+            
+            
+            
+</div>
+          
+        </div>
+        
+       <hr style="margin: 0; padding: 0;" />
+   
+        <p  style="margin: 0; padding: 0; font-weight: bold; font-size: small; color: black; padding-left: 20px;" class="marks">1. Goods booked at Owner's Risk(Contents not Checked. 2. We are not responssible for any loss of goods caused due to theft, accident, riot, rainwater, etc. or any other damage.
+        </p>
+        
+    </form>
+    <script src="../../data/data.js"></script>
+    <script>
+        //--Loading Bill Data
+            const currentBillNumber = localStorage.getItem("billNumber");
+            const currentBillDate = localStorage.getItem("billDate");
+            const lorryNumber = localStorage.getItem("lorryNumber");
+            const lorryOwnerName = localStorage.getItem("lorryOwnerName");
+            const driverName = localStorage.getItem("driverName");
+            const dlNumber = localStorage.getItem("dlNumber");
+            const shipFrom = localStorage.getItem("shipFrom");
+            const shipTo = localStorage.getItem("shipTo");
+            const consignorName = localStorage.getItem("consignor");
+            const consignorAddress = localStorage.getItem("consignorAddress");
+            const consigneeName = localStorage.getItem("consignee");
+            const consigneeAddress = localStorage.getItem("consigneeAddress");
+            const numberBales = localStorage.getItem("numberBales");
+            const quality = localStorage.getItem("quality");
+            const weight = localStorage.getItem("weight");
+            const rate = localStorage.getItem("rate");
+            const advancePay = localStorage.getItem("advancePay");
+            const totalPayable = localStorage.getItem("totalPayable");
+            const prNumber = localStorage.getItem("prNumber");
+            const pMark = localStorage.getItem("pMark");
+            const lotNumber = localStorage.getItem("lotnumber");
+            const invoiceNumber = localStorage.getItem("invoiceNumber");
+            const remark = localStorage.getItem("remark");
+            const noteData = localStorage.getItem("note");
+
+            //------------------------------------------------------------
+            //Setting Title
+            document.querySelector(
+            "#title"
+            ).innerHTML = `${lorryNumber}-${currentBillNumber} `;
+
+            //---------------------------------------------------------
+            //Setting Bill Data
+
+            document.querySelector(
+            "#subject"
+            ).innerHTML = `SUBJECT TO ${company.subjectTo} JURISDICTION`;
+
+            document.querySelector("#companyName").innerHTML = company.name;
+
+            document.querySelector("#agentType").innerHTML = `${company.agent}`;
+
+            document.querySelector("#lrNo").value = lorryNumber
+            ? lorryNumber
+            : defaultValue;
+
+            document.querySelector("#dName").value = driverName
+            ? driverName
+            : defaultValue;
+
+            document.querySelector("#state0").value = shipFrom
+            ? shipFrom
+            : defaultValue;
+
+            document.querySelector("#consir").value = consignorName
+            ? consignorName
+            : defaultValue;
+
+            document.querySelector("#consiradd").innerHTML = consignorAddress
+            ? consignorAddress
+            : defaultValue;
+
+            document.querySelector("#lrOName").value = lorryOwnerName
+            ? lorryOwnerName
+            : defaultValue;
+
+            document.querySelector("#DlN").value = dlNumber
+            ? dlNumber
+            : defaultValue;
+
+            document.querySelector("#state1").value = shipTo ? shipTo : defaultValue;
+
+            document.querySelector("#consie").value = consigneeName
+            ? consigneeName
+            : defaultValue;
+
+            document.querySelector("#consieadd").innerHTML = consigneeAddress
+            ? consigneeAddress
+            : defaultValue;
+
+            document.querySelector("#datein").value = currentBillDate
+            ? currentBillDate
+            : new Date().toISOString().substr(0, 10);
+
+            document.querySelector("#BillNo").value = currentBillNumber
+            ? currentBillNumber
+            : defaultValue;
+
+            document.querySelector("#bales").value = numberBales
+            ? numberBales
+            : defaultValue;
+
+            document.querySelector("#QL").value = quality
+            ? quality
+            : defaultValue;
+
+            document.querySelector("#prno").value = prNumber
+            ? prNumber
+            : defaultValue;
+
+            document.querySelector("#PM").value = pMark ? pMark : defaultValue;
+
+            document.querySelector("#lNo").value = lotNumber
+            ? lotNumber
+            : defaultValue;
+
+            document.querySelector("#InNo").value = invoiceNumber
+            ? invoiceNumber
+            : defaultValue;
+
+            document.querySelector("#weights").value = weight ? weight : defaultValue;
+
+            document.querySelector("#rate").value = rate ? `${rate}/-` : defaultValue;
+
+            document.querySelector("#aRs").value = advancePay
+            ? advancePay
+            : defaultValue;
+
+            document.querySelector("#tRs").value = totalPayable
+            ? totalPayable
+            : defaultValue;
+
+            //--------------------------------------------------------------------------------------------------------
+
+            document.addEventListener("keydown", function(event){
+            if(event.key === "Escape"){
+            const body = document.getElementsByTagName('body')[0];
+            body.querySelector("#billType").innerHTML = "Consignee copy";
+            const copy1 = body.cloneNode(true);
+            copy1.querySelector("#billType").innerHTML = "Consignor copy";
+            const copy2 = body.cloneNode(true);
+            copy2.querySelector("#billType").innerHTML = "Driver copy";
+            document.body.appendChild(copy1);
+            document.body.appendChild(copy2);
+            }
+            });
+
+    document.addEventListener("keydown", function(event) {
+    if (event.ctrlKey && event.key === "s") {
+      event.preventDefault();
+      const data = [{
+        lrNumber: currentBillNumber,
+        date: currentBillDate,
+        lorryNumber: lorryNumber,
+        lorryOwnerName: lorryOwnerName,
+        driverName: driverName,
+        dlNumber: dlNumber,
+        shipFrom: shipFrom,
+        shipTo: shipTo,
+        consignee: consigneeName,
+        consigneeAddress: consigneeAddress,
+        consignor: consignorName,
+        consignorAddress: consignorAddress,
+        numberBales: numberBales,
+        quality: quality,
+        prNumber: prNumber,
+        pMark: pMark,
+        lotNumber: lotNumber,
+        invoiceNumber: invoiceNumber,
+        weight: weight,
+        rate: rate,
+        advance: advancePay,
+        total: totalPayable,
+        remark: remark,
+        note: noteData
+
+      },];
+
+      writeToExcel(data, currentBillNumber);
+    }
+  });
+
+// Create a function to write data to Excel
+function writeToExcel(data, number) {
+  const wb = XLSX.utils.book_new();
+  const ws = XLSX.utils.json_to_sheet(data);
+  XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+  XLSX.writeFile(wb, `${number}.xlsx`);
+}
+    </script>
+</body>
+
+</html>

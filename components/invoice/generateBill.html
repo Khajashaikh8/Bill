@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./generateBill.css">
+    <title>Generate New Invoice</title>
+</head>
+<body class="bg-light text-dark" onload="loadRemarks()">
+    <div>
+        <div class="row bg-warning text-light mb-2 py-1 text-center">
+            <h2>SOUTH INDIAN LORRY SUPPLIERS - BILLING SYSTEM</h2>
+            <h5 id="user" class="text-dark text-start px-5">Welcome, </h5>
+        </div>
+        <div class="row mx-2">
+         <form>
+            <div class="row my-2">
+                <div class="col-3">
+                    <input id="billNumber" type="text" placeholder="Bill Number">
+                </div>
+                <div class="col-5">
+                    <button onclick="increaseBillNumber()" class="btn btn-danger">Next Bill</button>
+                </div>
+                <div class="col-4">
+                    <input id="billDate" type="date"  placeholder="Date">
+                </div>
+               
+            </div>
+            <div class="border border-info rounded p-2">
+           <h5 class="text-center py-1 border border-dark">Communication Details</h5>
+            <div class="row mb-4">
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="lrNumber" placeholder="Lorry Number" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="lrOwner" placeholder="Lorry Owner Name" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="drName" placeholder="Driver Name" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="dlNumber" placeholder="DL No." class="form-control" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="shipFrom" placeholder="From" class="form-control" />
+                    <div class="shipFrom-autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-outline">
+                    <input type="text" id="consignor" placeholder="Consignor" class="form-control" />
+                    <div class="consignor-autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="form-outline">
+                    <textarea type="text" id="cgrAddress" placeholder="Consignor Address" class="form-control"></textarea>
+                    <div class="consignor-address-autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="shipTo" placeholder="To" class="form-control" />
+                    <div class="shipTo-autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-outline">
+                    <input type="text" id="consignee" placeholder="Consignee" class="form-control" />
+                    <div class="consignee-autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="form-outline">
+                    <textarea type="text" id="cgeAddress" placeholder="Consignee Address" class="form-control"></textarea>
+                    <div class="consignee-address-autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+        <div class="border border-danger rounded p-2">
+            <h5 class="text-center py-1 border border-dark">Goods Details</h5>
+            <div class="row mb-4">
+                 <div class="col-2">
+                     <div class="form-outline">
+                        <label class="my-1">Number of Bales</label>
+                      <input type="number" onchange="calculateBill()" onkeyup="calculateBill()" value="0" id="balesNumber" placeholder="Number of Bales" class="form-control" />
+                     </div>
+                 </div>
+                 <div class="col-2">
+                    <div class="form-outline">
+                        <label class="my-1">Quality</label>
+                     <input type="text" id="quality" placeholder="Quality" class="form-control" />
+                    </div>
+                </div>
+                 <div class="col-2">
+                     <div class="form-outline">
+                        <label class="my-1">Weight</label>
+                      <input type="text" id="weight" placeholder="Weight" class="form-control" />
+                     </div>
+                 </div>
+                 <div class="col-2">
+                     <div class="form-outline">
+                        <label class="my-1">Rate Per Bale</label>
+                      <input type="number" onchange="calculateBill()" onkeyup="calculateBill()" id="rate" value="0" placeholder="Rate Per Bale" class="form-control" />
+                     </div>
+                 </div>
+                 <div class="col-2">
+                     <div class="form-outline">
+                        <label class="my-1">Advance Amount Paid in Rupees</label>
+                      <input type="number" onchange="calculateBill()" onkeyup="calculateBill()" id="advancePay" value="0" placeholder="Advance Amount Paid in Rupees" class="form-control" />
+                     </div>
+                 </div>
+                 <div class="col-2">
+                    <div class="form-outline">
+                    <label class="my-1">Total Amount Payabale in Rupees</label>
+                     <input type="text"  id="totalPay" placeholder="Total Amount Payabale in Rupees" value="0" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row mb-4">
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="prNumber" placeholder="P.R Number" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="pMark" placeholder="P.Mark" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="lotNumber" placeholder="Lot Number" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-outline">
+                    <input type="text" id="invoiceNumber" placeholder="Invoice Number" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row mb-4">
+                <div class="col-4">
+                    <div class="form-outline ">
+                        <label class="my-1">Select Remark</label>
+                        <select class="form-select font-weight-bold" id="remarksList" aria-label="Default select example">
+                            <option selected>Select Remark</option>
+                          </select>
+                       
+                    </div>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-4">
+                    <div class="form-outline">
+                        <label class="my-1">Note</label>
+                       <input type="text" id="note" placeholder="Note" class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 text-center m-4">
+                <!-- Submit button -->
+                <button onclick="generateBill(event, 'new')" class="btn btn-primary btn-lg btn-block px-5">Genrate NEW Bill</button>
+            </div>
+            <div class="col-3 text-center m-4 ">
+                <!-- Submit button -->
+                <button onclick="generateBill(event, 'old')" class="btn btn-warning btn-lg btn-block px-5">Genrate OLD Bill</button>
+            </div>
+            <div class="col-3 text-center m-4">
+                <!-- Submit button -->
+                <button onclick="generateBill(event, 'system')" class="btn btn-primary btn-lg btn-block px-5">Genrate System Bill</button>
+            </div>
+        </div>
+       
+        </form>
+        </div>
+    </div>
+    <script src="../../data/data.js"></script>
+    <script src="./generateBill.js"></script>
+</body>
+</html>

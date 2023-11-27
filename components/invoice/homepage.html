@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <title>HomePage</title>
+</head>
+<body>
+    <div>
+        <div class="row bg-warning text-light mb-2 py-1 text-center">
+            <h2>SOUTH INDIAN LORRY SUPPLIERS - BILLING SYSTEM</h2>
+            <h5 id="user" class="text-dark text-start px-5">Welcome, </h5>
+        </div>
+        <div class="row border border-danger m-2">
+           
+            <div class="col-1">
+            </div>
+                <div class="col-3 m-2 border border-dark bg-info rounded text-center" style="padding-top: 50px; padding-bottom: 50px; padding-left: 20px;">
+                    <button class="border border-info bg-info rounded" onclick="generateBill()">
+                      <h3>Generate New Bill</h3>
+                    </button>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-4 m-2 border border-dark bg-warning rounded text-center" style="padding-top: 50px; padding-bottom: 50px; padding-left: 20px;">
+                    <button class="border border-warning bg-warning rounded" onclick="generateDeclaration()">
+                      <h3 >Generate New Declaration</h3>
+                    </button>
+                </div>
+        </div>
+        <div class="row">
+            <p id="oldBills"></p>
+        </div>
+    </div>
+    <script src="../../data/data.js"></script>
+    <script src="./homepage.js"></script>
+</body>
+</html>

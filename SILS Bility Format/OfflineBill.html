@@ -1,0 +1,652 @@
+<html>
+
+<head>
+    <title>consignee copy</title>
+    <style>
+        
+        .tableBank {
+            border: 1px black;
+            border-collapse: collapse;
+            font-size: smaller;
+            font-weight: bold;
+            
+        }
+        
+        .comname{
+
+            background-image: linear-gradient(to bottom,purple, purple,purple);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        }
+
+        label{
+
+            font-weight: bold;
+        }
+
+        
+        .marks{
+            font-size:small;
+        }
+        .transfer {
+            float: right;
+            
+
+        }
+
+        .mn {
+            width: 400px;
+        }
+
+
+        .table0,
+        .table1,
+        .table2,
+        .table3,
+        .table4 {
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: medium;
+           
+
+        }
+
+        .note1 {
+            width: 700px;
+            
+        }
+
+
+        
+
+        #mailid {
+            width: 250px;
+        }
+
+        #state {
+            width: 500px;
+        }
+
+        #address,
+        #mobile {
+            width: 1000px;
+        }
+
+        .line1 {
+            display: inline;
+            padding-left: 60px;
+        }
+
+        .table0 {
+            width: 27%;
+        }
+
+        .table1 {
+            width: 12.5%;
+        }
+
+        .table2 {
+            width: 12.5%;
+        }
+
+        .table3 {
+            width: 20%;
+        }
+
+        .table4 {
+            width: 28%;
+        }
+
+
+        th,
+        td {
+            border: 2px solid black;
+        }
+
+        .almiddle {
+            padding-top: 36px;
+            padding-bottom: 36px;
+
+        }
+
+        .alAxact {
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+
+        .alAxact1 {
+            padding-top: 11px;
+            padding-bottom: 12px;
+        }
+
+        label {
+            text-align: left;
+            padding-right: 10px;
+        }
+
+        .inputt {
+            float: right;
+            inline-size: 3cm;
+        }
+
+        .sizy {
+            width: 180px;
+        }
+
+        .nonee {
+            float: none;
+            inline-size: 3cm;
+            block-size: 1.4cm;
+        }
+
+        .BillNo {
+            display: inline;
+            padding-left: 10px;
+            
+        }
+            #BillNo{
+                font-size: large;
+
+            }
+        .datein {
+            float: right;
+            padding-right: 20%;
+           
+        }
+        #datein{
+            font-size: large;
+        }
+ 
+        #lrno {
+            width: 300px;
+            font-size: large;
+        }
+
+        .lrno {
+            display: inline-flex;
+            padding-left: 10px;
+        }
+
+        .lrOName {
+            padding-left: 250px;
+            padding-top: 0.1rem;
+        }
+
+        #lrOName {
+            width: 350px;
+            font-size: large;
+        }
+
+        #dName {
+            width: 300px;
+            font-size: large;
+        }
+
+        .dName {
+            display: inline-flex;
+            padding-left: 10px;
+        }
+
+        .DlN {
+            padding-left: 312.5px;
+        }
+
+        #DlN {
+            width: 300px;
+            font-size: large;
+        }
+
+        #state0 {
+            width: 300px;
+            font-size: large;
+        }
+
+        .state0 {
+            display: inline-flex;
+            padding-left: 10px;
+        }
+
+        .state1 {
+            padding-left: 393.5px;
+        }
+
+        #state1 {
+            width: 300px;
+            font-size: large;
+        }
+
+        #consir {
+            width: 350px;
+            font-size: large;
+        }
+
+        .consir {
+            display: inline-flex;
+            padding-left: 10px;
+        }
+
+        .consie {
+            padding-left: 212px;
+        }
+
+        #consie {
+            width: 350px;
+            font-size: large;
+        }
+
+
+
+        .consiradd {
+            display: inline-flex;
+            padding-left: 87px;
+        }
+
+        #consiradd {
+            width: 400px;
+            font-size: large;
+        }
+
+        .consieadd {
+            padding-left: 192px;
+        }
+
+        #consieadd {
+            width: 400px;
+            font-size: large;
+        }
+
+        hr {
+            border: 1px solid black;
+        }
+
+        .bottom-container {
+            padding-bottom: 5px;
+        }
+
+        .top-one {
+            display: inline;
+            float: left;
+            padding-right: 55px;
+            
+
+        }
+           th,td{
+               border: 1px solid black;
+           }
+           input{
+               border: 1px solid lightgrey;
+           }
+
+           .line1{
+               padding-left: 5px;
+               font-size:x-small;
+           }
+       .bottomlast-container {
+           padding-top: 20px;
+        }
+
+        .mn{
+            width: 300px;
+            border: none;
+        }
+        
+        .tableBranch{
+            border-collapse: collapse;
+            font-weight: bold;
+           font-size: larger;
+          
+        }
+
+        input{
+            border:none;
+            font-weight: bold;
+        }
+
+        .signature{
+            
+            display: inline;
+        }
+        .mainN{
+            padding-left: 50%;
+            font-size: x-large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+       
+
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="top-container" style="margin-right: 3%;display: inline-flex;">
+            <div class="allIn">
+                <div class="top-one">
+                    <img src="logo.jpg" alt="logo" border="0">
+<img src="sharp-logo.png" alt="sharp-logo" border="0">
+<p class="line1" style="font-size: medium;">SUBJECT TO BIDAR JURISDICTION</p>
+                
+                    <h1 class="comname">SOUTH INDIA LORRY SUPPLIERS</h1>
+
+                    <h3 class="tagline" style="display: inline;">COMMISSION AGENT  </h3>
+                   
+                    <img style=" margin-right:25%; display:inline; margin-bottom: 0%; margin-top: 0%; padding-top: 0%; float:right; " src="SharpQR.png" alt="QR Code" border="0">
+                   
+                    <div>
+                        <input style=" width: 140px; float: left; font-family: 'Times New Roman', Times, serif; color: red;font-size:medium; font-weight: bolder; margin-left: 25%;margin-top: 5%; " value="Copy">
+                    </div>
+                    
+                </div>
+                
+               
+
+                <div class="branch" >
+                    
+                    <table class="tableBranch"  >
+                        <tr>
+                            <th>BRANCH OFFICES</th>
+                        </tr>
+                        <tr>
+                            <td><input style="color: black;" type="text" value="SANGAREDDY (T.S.) : " disabled></td>
+                            <td><input style="color: black;" type="text" value="M. 9271714371, 9271775666, 9573389992" class="mn" disabled></td>
+                        </tr>
+                        <tr>
+                            <td><input style="color: black;"  type="text" value="UDGIR (M.H.) : " disabled></td>
+                            <td><input style="color: black;" type="text" value="M. 9075275444, 9075585444" class="mn" disabled></td>
+                        </tr>
+                        <tr>
+                            <td><input style="color: black;" type="text" value="SHAHPUR (K.A.) : " disabled></td>
+                            <td><input style="color: black;" type="text" value="M. 9686183777, 9742937777, 9901670333" class="mn" disabled></td>
+                        </tr>
+                    </table>
+                      
+                    
+
+                </div>
+                <div class="mainN">
+
+                    <input  type=" text" style="font-size: medium;color: black;" value="PAN No. BTOPS9421D" name="panNumber" id="pannu" disabled>
+                
+                    <input type="text" style="font-size: medium;color: black;" value="southindials999@gmail.com" name="email" id="mailid" disabled>
+                                                          
+                    <input type="text" style="font-size: medium;  width: 480px;color: black;" value="EXPRESS SERVICE TO : TAMILNADU" id="state" disabled>
+                               
+        <hr>                  
+        
+                    <input style="width: 700px; margin-left: 2%;color: black;" type="text" value="H.O.Near Dastagir Masjid Shahpur Gate, Hyderabad Road, BIDAR - 585402(K.A.)" name="address" id="address" disabled>
+                    <input style="width: 700px; margin-left: 2%;color: black;" type="text" value="Mobile No. 9741754999, 9742362999, 9741753888, 9742938888, Off No. 9980741222" id="mobile" disabled>     
+                            
+                </div> 	              GSTIN :29BTOPS9421D1Z6
+        
+       </div>
+        
+
+        
+        </div>
+
+        
+
+        <hr>
+
+    <div class="middle-container" style="font-size: larger;">
+
+            <div class="BillNo">
+                <label>No.</label>
+                <input type="number" value="2030" id="BillNo">
+            </div>
+
+            <div class="datein">
+                <input type="date" id="datein">
+            </div>
+
+            <br>
+
+            <div class="lrNo">
+                <label>Lorry No.</label>
+                <input type="text" id="lrNo">
+                <div class="lrOName"><label>Lorry Owner Name</label>
+                    <input type="text" id="lrOName">
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="dName">
+                <label>Driver Name</label>
+                <input type="text" id="dName">
+                <div class="DlN">
+                    <label>DL No.</label>
+                    <input type="text" id="DlN">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="state0">
+                <label>From</label>
+                <input type="text" id="state0">
+
+                <div class="state1">
+                    <label>To</label>
+                    <input type="text" id="state1">
+
+                </div>
+            </div>
+
+            <br>
+
+            <div class="consir">
+                <label>Consignor</label>
+                <input type="text" id="consir">
+
+                <div class="consie">
+                    <label>Consignee</label>
+                    <input type="text" id="consie">
+                </div>
+            </div>
+
+            <div class="consiradd">
+
+                <input type="text" id="consiradd">
+
+                <div class="consieadd">
+
+                    <input type="text" id="consieadd">
+                </div>
+            </div>
+
+            <br>
+
+            <hr>
+
+        </div>
+  
+        <div class="bottom-container">
+            <table class="table0">
+                <tr>
+                    <th>Decription of Goods</th>
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label>No.of Bales</label>
+                        <input class="sizy" type="text" id="bales" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Quality</label>
+                        <input class="sizy" type="text" id="QL" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>P.R No</label>
+                        <input class="sizy" type="text" id="prno" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>P.Mark</label>
+                        <input class="sizy" type="text" id="PM" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Lot No.</label>
+                        <input class="sizy" type="text" id="lNo" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Invo No.</label>
+                        <input class="sizy" type="text" id="InNo" class="inputt">
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table1">
+                <tr>
+                    <th>Weight</th>
+                </tr>
+                <tr>
+                    <td class="almiddle">
+                        <input type="text" id="weights" class="nonee" class="inputt">
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table2">
+                <tr>
+                    <th>Rate</th>
+                </tr>
+                <tr>
+                    <td class="almiddle">
+                        <input type="text" id="rate" class="nonee" class="inputt">
+                    </td>
+
+                </tr>
+            </table>
+
+            <table class="table3">
+                <tr>
+                    <th>Rs.</th>
+                </tr>
+                <tr>
+                    <td class="alAxact">
+                        <label>-----</label>
+                        <input type="text" value="" id="iRs" class="inputt">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="alAxact">
+                        <label>Advance</label>
+                        <input type="text" value="0.0" id="aRs" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="alAxact">
+                        <label style="font-size: large;">Total</label>
+                        <input  style="font-size: large;" type="text" value="0.0" id="tRs" class="inputt">
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table4">
+                <tr>
+                    <th>Ramarks</th>
+                </tr>
+                <tr>
+                    <td class="alAxact1">
+                        <label>----</label>
+                        <input type="text" name="" id="tbb" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="alAxact1">
+                        <label>----</label>
+                        <input type="text" name="" id="tp" class="inputt">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="alAxact1">
+                        <label>Transport A/c Only</label>
+                        <input type="checkbox" name=""  id="tao" class="inputt" checked>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+
+        <div class="bottomlast-container">
+            <div class="transfer">
+
+                <br>
+              
+                
+                <table class="tableBank" style="font-size: large;">
+                    <tr>
+                        <td>BANK NAME : <input style="font-size: large; color: black;" type="text" value="I.D.B.I" disabled></td>
+
+                    </tr>
+                    <tr>
+                        <td>BRANCH : <input style="font-size: large; color: black;" type="text" value="BIDAR (K.A.)" disabled></td>
+                    </tr>
+                    <tr>
+                        <td> A/C : <input style="font-size: large; color: black;" type="text" value="1081102000002288" disabled></td>
+                    </tr>
+                    <tr>
+                        <td> IFSC CODE : <input style="font-size: large; color: black;" type="text" value="IBKL0001081" disabled></td>
+
+                    </tr>
+                </table>
+                <h4 class="lineMain" style="display: inline-block;" >GST Payable by : Consignor/Consignee only</h4>
+            </div>
+           
+            <div>
+ <input style="color: black;" class="note1" type="text" value="NOTE : PAY AT TRANSPORT ACCOUNT ONLY." style="font-weight: bolder; margin-top: 1%;" disabled>
+                
+            </div>
+
+                
+               
+               
+ <div class="signature">
+
+                 
+               
+                <img style="display: inline-flex; margin-left: 41%; margin-top: 1%; " src="sign.jpg" alt="DigitallySigned" border="0">
+                
+                <h5 class="sign1" style="display: inline-flex; margin-right: 30%; font-size: medium;" >Sig.Lorry Owner or Driver </h5>
+                <h5 class="sign2" style="display: inline-flex;font-size: medium;">Sig.South India Lorry Suppliers</h5>
+            
+            
+            
+</div>
+          
+        </div>
+        
+       <hr>
+   
+        <p  style="font-weight: bold; font-size: small;" class="marks">1. Goods booked at Owner's Risk(Contents not Checked. 2. We are not responssible for any loss of goods caused due to theft, accident, riot, rainwater, etc. or any other damage.
+        </p>
+        
+    </form>
+</body>
+
+</html>
