@@ -25,10 +25,8 @@ for (var i=0; i < financial_year.length; i++){
 }
 
 function enterKeyPressed(event) {
-      if (event.keyCode == 13) {
+     
          windows.print();
          return true;
-      } else {
-         return false;
-      }
+     
    }
