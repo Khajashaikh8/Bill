@@ -4,7 +4,10 @@ var currentUser = localStorage.getItem("currentUser");
 if (!currentUser) {
   location.href = "../../index.html";
 }
-
+else {
+  var user = document.querySelector("#user");
+  user.innerHTML += currentUser;
+}
 //----------------------------------------
 // Loading Old Bills
 
